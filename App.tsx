@@ -6,19 +6,22 @@
  */
 
 import React from 'react'
-import { Button, SafeAreaView, Text, View, useColorScheme } from 'react-native'
+import { Button, SafeAreaView, ScrollView, View } from 'react-native'
 
 import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form'
 import { FormBuilder, IField } from './src/Builder/formbuilder'
-import { Theme } from './src/theme.config'
+import Announcement from './src/components/Announcement'
+import ButtonLight from './src/components/ButtonLight'
+import ButtonPrimary from './src/components/ButtonPrimary'
 
 type ITestFieldType = {
-    username: string
+    product_name: string
+    price: string
 }
 
 function App(): React.JSX.Element {
-    const isDarkMode = useColorScheme() === 'dark'
     const form = useForm<ITestFieldType>()
     const { handleSubmit } = form
 
@@ -28,7 +31,7 @@ function App(): React.JSX.Element {
 
     const Fields: IField<ITestFieldType>[] = [
         {
-            id: 'username',
+            id: 'product_name',
             type: 'text',
             validation: {
                 required: { value: true, message: 'This field is required' },
@@ -36,18 +39,47 @@ function App(): React.JSX.Element {
             textfieldConfig: {
                 config: {
                     icon: faUser,
-                    label: 'Username',
+                    label: 'Name',
+                    placeholder: 'Username',
+                },
+            },
+        },
+        {
+            id: 'price',
+            type: 'text',
+            // validation: {
+            //     required: { value: true, message: 'This field is required' },
+            // },
+            textfieldConfig: {
+                config: {
+                    icon: faUser,
+                    label: 'Price',
                     placeholder: 'Username',
                 },
             },
         },
     ]
     return (
-        <SafeAreaView style={isDarkMode ? Theme.darkMode : Theme.lightMode}>
-            <View style={{ padding: 10 }}>
-                <FormBuilder useForm={form} fields={Fields} />
-                <Button onPress={handleSubmit(submit)} title="Test Submit" />
-            </View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <ScrollView>
+                <View style={{ padding: 10 }}>
+                    <Announcement
+                        title="Announcement Title !"
+                        description="We sometime create an amazing stuff and sometime we ruin an amazing stuff"
+                    />
+                    <FormBuilder useForm={form} fields={Fields} />
+                    <View style={{ marginTop: 200 }}>
+                        <Button
+                            onPress={handleSubmit(submit)}
+                            title="Test Submit"
+                        />
+                    </View>
+                    <ButtonPrimary text="Submit" />
+                    <View style={{ marginTop: 10 }}>
+                        <ButtonLight text="Submit" />
+                    </View>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }

@@ -1,31 +1,24 @@
-import { KeyboardType, ViewStyle } from "react-native";
+import { KeyboardType, ViewStyle } from 'react-native'
 
 interface IConfig {
-  lightModeStyleContainer?: ViewStyle;
-  darkModeStyleContainer?: ViewStyle;
+    customStyleContainer?: ViewStyle
+    icon?: any
+    iconSize?: number
+    label?: string
+    placeholder?: string
+    keyboardType?: KeyboardType
+    value?: string
 
-  lighModeStyleIconWrapper?: ViewStyle;
-  darkModeStyleIconWrapper?: ViewStyle;
+    onChangeText?: (val: string) => void
+    onBlur?: (x: any) => void
 
-  ligthModeStyleTextInput?: ViewStyle;
-  darkModeStyleTextInput?: ViewStyle;
-
-  icon?: any;
-  iconSize?: number;
-  label?: string;
-  placeholder?: string;
-  keyboardType?: KeyboardType;
-  value?: string;
-
-  onChangeText?: (val: string) => void;
-  onBlur?: (x: any) => void;
-
-  error?: any;
-  required?: any;
+    error?: any
+    required?: any
+    type?: 'text' | 'password'
 }
 
 interface ITextfield {
-  config?: IConfig;
+    config?: IConfig
 }
 
-export type { ITextfield };
+export type { ITextfield }

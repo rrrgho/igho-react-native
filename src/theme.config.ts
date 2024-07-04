@@ -1,22 +1,17 @@
 const Theme = {
-  colors: {
-    primary: "",
-    secondary: "",
-    danger: "red",
-  },
-  darkMode: {
-    backgroundColor: "#000",
-    borderColor: "#fff",
-    color: "#fff",
-  },
-  lightMode: {
-    backgroundColor: "#fff",
-    borderColor: "#000",
-    color: "#000",
-  },
-  border: {
-    radius: 15,
-  },
-};
+    colors: {
+        primary: 'orange',
+        secondary: '#ddd',
+        danger: 'red',
+        success: 'green',
+        warning: 'orange',
+        white: '#fff',
+        black: '#000',
+        icon: 'orange',
+    },
+    border: {
+        radius: 15,
+    },
+}
 
-export { Theme };
+export { Theme }

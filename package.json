@@ -20,6 +20,7 @@
     "react-hook-form": "^7.51.5",
     "react-native": "0.74.1",
     "react-native-responsive-dimensions": "^3.1.1",
+    "react-native-select-dropdown": "^4.0.1",
     "react-native-svg": "^15.3.0"
   },
   "devDependencies": {
