@@ -3154,6 +3154,7 @@ __metadata:
     react-hook-form: ^7.51.5
     react-native: 0.74.1
     react-native-responsive-dimensions: ^3.1.1
+    react-native-select-dropdown: ^4.0.1
     react-native-svg: ^15.3.0
     react-test-renderer: 18.2.0
     typescript: 5.0.4
@@ -8412,6 +8413,13 @@ __metadata:
   peerDependencies:
     react-native: ">=0.44.1"
   checksum: 1eb86953b496c4a6bbbe14a543fa6e290dfe74e5aba0a9b525baafb61b8a4b1eec58d823e1c25e3512c148b12aee29f4f15530ccd5261fe49e14079f53f83c94
+  languageName: node
+  linkType: hard
+
+"react-native-select-dropdown@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "react-native-select-dropdown@npm:4.0.1"
+  checksum: 0f841ec81921e4f79959c883a1c83570e60b9fe28bbf075892aec75edf9bfd5506a7d71221fce388bf664a9d863785fc10a87dac3a27a9cdac248da909611ddd
   languageName: node
   linkType: hard
 
