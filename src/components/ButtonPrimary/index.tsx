@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { TouchableOpacity, useColorScheme } from 'react-native'
+import { Alert, TouchableOpacity, useColorScheme } from 'react-native'
 import Body1 from '../Body1'
 import { styles } from './style'
 import { IButtonPrimary } from './type'
